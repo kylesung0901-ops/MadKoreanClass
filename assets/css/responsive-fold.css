@@ -1,0 +1,49 @@
+/* Galaxy Z Fold Specific Responsiveness */
+
+/* 
+   Targeting the unfolded state which is roughly a small tablet/square aspect ratio.
+   Typical width range: 768px (like iPad Mini) to around 900px.
+   Bootstrap 'md' breakpoint is 768px.
+*/
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    /* Ensure containers have padding on the sides */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100%;
+    }
+
+    /* Adjust typography for readability on medium screens */
+    body {
+        font-size: 16px; 
+    }
+
+    .section-title .title {
+        font-size: 28px;
+    }
+
+    /* Force columns to stack if they get too squeezed, or stay side-by-side if there's room */
+    /* Adjusting header navigation for this intermediate size */
+    .header-logo img {
+        max-width: 150px;
+    }
+    
+    .navigation .nav-menu > li > a {
+        padding: 25px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Specific fix for square-ish aspect ratio (Fold unfolded) */
+@media screen and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) and (min-width: 700px) {
+    .slider-area {
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .single-slider .slider-content {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
